@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .clock {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .alarm-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="time"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="current-time">00:00:00</div>
+    <div class="alarm-form">
+        <input type="time" id="alarm-time">
+        <button onclick="setAlarm()">Set Alarm</button>
+    </div>
+    <div id="alarm-status"></div>
+
+    <audio id="alarm-sound" src="download-ringtone-807-funonsite-com-40938.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
